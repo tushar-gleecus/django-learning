@@ -19,3 +19,9 @@
     </footer>
 </body>
 </html>
+
+{% if user.is_authenticated %}
+  <p>Logged in as {{ user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+{% else %}
+  <p><a href="{% url 'login' %}">Login</a></p>
+{% endif %}
