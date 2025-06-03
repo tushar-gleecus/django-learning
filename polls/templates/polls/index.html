@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Polls Home{% endblock %}
+
+{% block content %}
+    <h2>Hello, {{ user_name }}!</h2>
+    <p>Topics you're learning:</p>
+    <ul>
+        {% for topic in topics %}
+            <li>{{ topic }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
